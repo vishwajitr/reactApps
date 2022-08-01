@@ -1,0 +1,53 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+h1 {
+  font-size: 50px;
+  text-align: center;
+}
+.todoApp {
+  max-width: 500px;
+  margin: 50px auto;
+  background-color: #cfd8dc;
+  padding: 10px 50px;
+  border-radius: 10px;
+}
+
+.todoApp form {
+  margin: 0px auto;
+  max-width: 312px;
+}
+.todoApp input {
+  padding: 5px;
+  outline: none;
+  border: 1px solid #5ab0db;
+  width: 200px;
+}
+.todoApp button {
+  padding: 5px;
+  width: 100px;
+  outline: none;
+  border: 1px solid #5ab0db;
+}
+
+.todoApp ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  margin-top: 20px;
+}
+.todoApp li {
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  align-items: center;
+}
+
+.todoApp .actions button {
+  background-color: #4caf50;
+  margin: 0 2px;
+  text-transform: capitalize;
+  font-weight: bold;
+}
