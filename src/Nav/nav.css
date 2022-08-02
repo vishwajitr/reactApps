@@ -1,0 +1,15 @@
+.HomeIndex {
+  text-align: center;
+}
+h2 {
+  font-size: 30px;
+  margin: 50px 0 30px;
+}
+nav {
+  display: flex;
+  flex-direction: column;
+}
+
+nav div {
+  margin-bottom: 10px;
+}

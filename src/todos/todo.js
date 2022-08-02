@@ -1,4 +1,4 @@
-import '../css/todo.css'
+import './todo.css'
 import { useState, useEffect } from "react"
 
 const Todo = (props) => {
@@ -28,31 +28,31 @@ const Todo = (props) => {
     const updatedTextHandler = (e) => { setupdatedText(e.target.value) }
 
     const editHandler = (id, text) => {
-        settodoEditing(id);
+        settodoEditing(id); //
         setupdatedText(text)
     }
 
     const updateHandler = (id) => {
         setTodo(todos.map(todo => {
-            if (todo.id == id) {
+            if (todo.id === id) {
                 return { ...todo, title: updatedText }
             }
             return todo
         }))
-        settodoEditing(null);
+        settodoEditing(null);// to disable input field
     }
 
     const deleteHandler = (id) => {
         const removeTodo = todos.filter((todo) => {
             return todo.id !== id
         })
-        setTodo(removeTodo);
+        setTodo(removeTodo); //add updated array without picked id
     }
 
     return (
         <div>
             <div className="todoApp">
-                <h1>{props.title}</h1>
+                <h1>Todo App</h1>
                 <form onSubmit={handlerSubmit}>
                     <input type="text" name="todoText" onChange={(e) => { setinputText(e.target.value) }} />
                     <button type="submit">Add Todo</button>
@@ -63,9 +63,9 @@ const Todo = (props) => {
                             return (
                                 <li key={index}>
                                     {(todoEditing !== todo.id) && todo.title}
-                                    {(todoEditing == todo.id) && <input type="text" name="editText" value={updatedText} onChange={updatedTextHandler} />}
+                                    {(todoEditing === todo.id) && <input type="text" name="editText" value={updatedText} onChange={updatedTextHandler} />}
                                     <div className="actions">
-                                        {(todoEditing == todo.id) && <button onClick={() => { updateHandler(todo.id) }}>save</button>}
+                                        {(todoEditing === todo.id) && <button onClick={() => { updateHandler(todo.id) }}>save</button>}
                                         {(todoEditing !== todo.id) && <button onClick={() => { editHandler(todo.id, todo.title) }}>edit</button>}
                                         <button onClick={() => { deleteHandler(todo.id) }}>Delete</button>
                                     </div>
