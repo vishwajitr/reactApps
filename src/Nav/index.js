@@ -16,6 +16,11 @@ function Nav() {
                         Todo App
                     </Link>
                 </div>
+                <div>
+                    <Link to="/restapi">
+                        RestAPI
+                    </Link>
+                </div>
             </nav >
         </div >
     );
