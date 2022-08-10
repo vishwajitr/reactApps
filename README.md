@@ -1,1 +1,3 @@
-1. TodoApp with localStorage
+1. TodoApp with localStorage - done
+2. Redux
+3. Websockets
