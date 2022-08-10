@@ -1,31 +1,15 @@
-import React from "react";
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import { React } from "react";
+import { addNumber } from './action'
 import './App.css';
-import Home from "./Home/index";
-import Todo from './Todos/todo';
-import RestAPI from './RestAPI/index'
+import { useDispatch, useSelector } from 'react-redux'
 
-function App() {
+function App(props) {
+  const dispatch = useDispatch()
   return (
     <div className="App">
-      <Router>
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/todo' element={<TodoApp />} />
-          <Route path='/restapi' element={<RestAPI />} />
-        </Routes>
-      </Router>
+      Test<br />
+      <button onClick={() => dispatch(addNumber())}>click</button>
     </div>
   );
 }
-
-
-function TodoApp() {
-  return <div>
-    <Todo />
-  </div>;
-}
-
-
-
 export default App;
