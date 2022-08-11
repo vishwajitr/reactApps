@@ -1,15 +1,22 @@
+const initialState = { count: 0 };
 
-
-const todos = (state = [], action) => {
+const counter = (state = initialState, action) => {
     switch (action.type) {
-        case 'Add_Todo':
+        case 'Add_Num':
+            console.log(action)
             return {
                 ...state,
-                id: action.id
+                count: action.count
+            }
+        case 'Sub_Num':
+            console.log(action)
+            return {
+                ...state,
+                count: action.count
             }
         default:
             return state
     }
 }
 
-export default todos
+export default counter

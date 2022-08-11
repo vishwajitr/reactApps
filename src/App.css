@@ -9,3 +9,19 @@ body {
   margin: 0;
   font-family: "Roboto", sans-serif;
 }
+button {
+  padding: 10px;
+}
+
+.app-container {
+  margin: 50px auto;
+  max-width: 300px;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+p {
+  margin-bottom: 20px;
+}
